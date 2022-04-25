@@ -1,0 +1,295 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Monserrat',sans-serif;
+}
+body{
+  background: rgb(29,117,222,);;
+  overflow: hidden;
+}
+
+@mixin boton-inicio {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+
+@mixin boton-inicio-a {
+  font-size: 20px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin boton-inicio-after-before {
+  position: absolute;
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+@mixin boton-inicio-before {
+  color: whitesmoke;
+  background: black;
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+@mixin boton-inicio-after {
+  color: black;
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 15px;
+  background-color: whitesmoke;
+
+}
+
+.botonInicio {
+  @include boton-inicio;
+}
+
+.botonInicio a {
+  @include boton-inicio-a
+}
+
+.botonInicio a:before,
+.botonInicio a:after {
+  content: "VOLVER A INICIO";
+  @include boton-inicio-after-before
+}
+
+.botonInicio a:before {
+  @include boton-inicio-before
+}
+
+.botonInicio a:after {
+  @include boton-inicio-after
+}
+
+.botonInicio a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.header {
+  background-color: rgb(29, 117, 222);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.botonInicio {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+::selection{
+  background: rgb(29,117,222,);
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrap{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrap .titulo{
+  height: 90px;
+  background: rgb(29,107,202);;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap form{
+  padding: 30px 25px 25px 25px;
+}
+.wrap form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrap form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: rgb(29,117,222,);;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrap form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: rgb(29,117,222,);
+  border: 1px solid rgb(29,117,222,);;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap form .contra{
+  margin: -8px 0 20px 0;
+}
+.wrap form .contra a{
+  color: rgb(29,117,222,);;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrap form .contra a:hover{
+  text-decoration: underline;
+}
+.wrap form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: rgb(29,117,222,);;
+  border: 1px solid rgb(29,117,222,);;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: rgb(29,117,222,);;
+}
+.wrap form .registro-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrap form .registro-link a{
+  color: rgb(29,117,222,);;
+  text-decoration: none;
+}
+form .registro-link a:hover{
+  text-decoration: underline;
+}
+
+.GridFondo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+
+.footer {
+  background-color: rgb(29, 117, 222);
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.middleFooter {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+
+.sportifyFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+img.logoFooter {
+  border-radius: 50px;
+
+}
+
+.socialFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+.rightsFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 20px 20px;
+  font-size: 12px;
+}
+
+.leftFooter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.aHomeLogoFooter {
+  grid-area: 2 / 2 / 3 / 3;
+  height: 45px;
+  width: 45px;
+}
+
+.rightFooter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.arrowLogoFooter {
+  grid-area: 2 / 4 / 3 / 5;
+
+}

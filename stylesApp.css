@@ -1,0 +1,28 @@
+.navbotones {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(29, 117, 222);
+}
+
+.h2dispositivos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.subtexto {
+  margin-left: 110px;
+  margin-top: 10px;
+  color: rgb(29, 117, 222);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+button {
+  background-color: rgb(29, 117, 222);
+}
+
+.device {
+  background-color: rgb(29, 117, 222);
+}

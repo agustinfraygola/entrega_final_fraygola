@@ -1,0 +1,551 @@
+@mixin boton-inicio {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+
+@mixin boton-inicio-a {
+  font-size: 20px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin boton-inicio-after-before {
+  position: absolute;
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+@mixin boton-inicio-before {
+  color: whitesmoke;
+  background: black;
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+@mixin boton-inicio-after {
+  color: black;
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 15px;
+
+}
+
+.botonInicio {
+  @include boton-inicio;
+}
+
+.botonInicio a {
+  @include boton-inicio-a
+}
+
+.botonInicio a:before,
+.botonInicio a:after {
+  content: "LOGIN";
+  @include boton-inicio-after-before
+}
+
+.botonInicio a:before {
+  @include boton-inicio-before
+}
+
+.botonInicio a:after {
+  @include boton-inicio-after
+}
+
+.botonInicio a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+.botonPlanes {
+  @include boton-inicio;
+}
+
+.botonPlanes a {
+  @include boton-inicio-a
+}
+
+.botonPlanes a:before,
+.botonPlanes a:after {
+  content: "REGISTRO";
+  @include boton-inicio-after-before
+}
+
+.botonPlanes a:before {
+  @include boton-inicio-before
+}
+
+.botonPlanes a:after {
+  @include boton-inicio-after
+}
+
+.botonPlanes a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.botonQuienesSomos {
+  @include boton-inicio;
+}
+
+.botonQuienesSomos a {
+  @include boton-inicio-a
+}
+
+.botonQuienesSomos a:before,
+.botonQuienesSomos a:after {
+  content: "QUIENES SOMOS";
+  @include boton-inicio-after-before
+}
+
+.botonQuienesSomos a:before {
+  @include boton-inicio-before
+}
+
+.botonQuienesSomos a:after {
+  @include boton-inicio-after
+}
+
+.botonQuienesSomos a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.botonDondeEncontrarnos {
+  @include boton-inicio;
+}
+
+.botonDondeEncontrarnos a {
+  @include boton-inicio-a
+}
+
+.botonDondeEncontrarnos a:before,
+.botonDondeEncontrarnos a:after {
+  content: "DONDE ENCONTRARNOS";
+  @include boton-inicio-after-before
+}
+
+.botonDondeEncontrarnos a:before {
+  @include boton-inicio-before
+}
+
+.botonDondeEncontrarnos a:after {
+  @include boton-inicio-after
+}
+
+.botonDondeEncontrarnos a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.botonDescarga {
+  @include boton-inicio;
+}
+
+.botonDescarga a {
+  @include boton-inicio-a
+}
+
+.botonDescarga a:before,
+.botonDescarga a:after {
+  content: "DESCARGA";
+  @include boton-inicio-after-before
+}
+
+.botonDescarga a:before {
+  @include boton-inicio-before
+}
+
+.botonDescarga a:after {
+  @include boton-inicio-after
+}
+
+.botonDescarga a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  background-color: rgb(29, 117, 222);
+  height: 300px;
+}
+
+.middleHeader {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20%;
+}
+
+.logoHeader {
+  margin-bottom: 10%;
+  margin-right: 80px;
+}
+
+.imgLogoHeader {
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.textHeader {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.titleHeader {
+  margin-left: -10%;
+}
+
+.subtextHeader {
+  margin-bottom: -10%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.rightHeader {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.HeaderLogin {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.HeaderRegister {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 3.2%;
+}
+
+.avalan{
+  width: 150px;
+  height: 80px;
+}
+
+.avalanLogos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 10px;
+}
+
+.divAvalan{
+  margin-bottom: 5px;
+}
+
+.textoLeftHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.text {
+  grid-area: 1 / 1 / 2 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  margin-top: 20px;
+}
+
+.content {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-left: 110px;
+}
+
+.beneficioUno {
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: rgb(30, 215, 96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800px;
+  font-size: large;
+  border-radius: 5%;
+  grid-gap: 10px;
+}
+
+.beneficioUno:hover,
+.beneficioDos:hover,
+.beneficioTres:hover,
+.beneficioCuatro:hover,
+.beneficioCinco:hover,
+.beneficioSeis:hover {
+  background-color: black;
+  color: rgb(30, 215, 96);
+}
+
+.beneficioUno,
+.beneficioDos,
+.beneficioTres,
+.beneficioCuatro,
+.beneficioCinco,
+.beneficioSeis {
+  font-weight: bold;
+  width: 80%;
+}
+
+.beneficioDos {
+  grid-area: 2 / 2 / 3 / 3;
+  background-color: rgb(30, 215, 96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800px;
+  font-size: large;
+  border-radius: 5%;
+  grid-gap: 10px;
+}
+
+
+.beneficioTres {
+  grid-area: 2 / 3 / 3 / 4;
+  background-color: rgb(30, 215, 96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800px;
+  font-size: large;
+  border-radius: 5%;
+  grid-gap: 10px;
+}
+
+.beneficioCuatro {
+  grid-area: 3 / 1 / 4 / 2;
+  background-color: rgb(30, 215, 96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800px;
+  font-size: large;
+  border-radius: 5%;
+  grid-gap: 10px;
+}
+
+.beneficioCinco {
+  grid-area: 3 / 2 / 4 / 3;
+  background-color: rgb(30, 215, 96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800px;
+  font-size: large;
+  border-radius: 5%;
+  grid-gap: 10px;
+}
+
+.beneficioSeis {
+  grid-area: 3 / 3 / 4 / 4;
+  background-color: rgb(30, 215, 96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800px;
+  font-size: large;
+  border-radius: 5%;
+  grid-gap: 10px;
+}
+
+.Descripcion {
+  background-color: rgb(29, 117, 222);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.QS {
+  margin-left: 320px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 40px;
+
+}
+
+.NuestroEquipo,
+.Horarios {
+  background-color: rgb(29, 117, 222);
+  color: black;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 90px;
+  border-radius: 20px;
+  animation-name: fadeInDown;
+  animation-duration: 4s;
+
+}
+
+.mapaGrid {
+  animation-name: fadeInDown;
+  animation-duration: 4s;
+}
+
+.mapa,
+.donde {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapa {
+  border: 10px solid rgb(29, 117, 222);
+  background-color: rgb(29, 117, 222);
+  border-radius: 10px;
+  margin: 15px;
+
+}
+
+.descarga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: rgb(30, 215, 96);
+  border-radius: 30px;
+  padding: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+
+
+}
+
+.botonDescarga {
+  margin-left: 30%;
+}
+
+.textoDescarga {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: rgb(29, 117, 222);
+}
+
+.GridFondo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+
+.footer {
+  background-color: rgb(29, 117, 222);
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.middleFooter {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+
+.sportifyFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+img.logoFooter {
+  border-radius: 50px;
+
+}
+
+.socialFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+.rightsFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 20px 20px;
+  font-size: 12px;
+}
+
+.leftFooter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.aHomeLogoFooter {
+  grid-area: 2 / 2 / 3 / 3;
+  height: 45px;
+  width: 45px;
+}
+
+.rightFooter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.arrowLogoFooter {
+  grid-area: 2 / 4 / 3 / 5;
+
+}

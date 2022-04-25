@@ -1,0 +1,292 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+.botonInicio {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+
+.botonInicio a {
+  font-size: 20px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  font-family: "Montserrat", sans-serif;
+}
+
+.botonInicio a:before,
+.botonInicio a:after {
+  content: "VOLVER A INICIO";
+  position: absolute;
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.botonInicio a:before {
+  color: whitesmoke;
+  background: black;
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+.botonInicio a:after {
+  color: black;
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+.botonInicio a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.header {
+  background-color: rgb(29, 117, 222);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.botonInicio {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.h2dispositivos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lista {
+  margin-left: 350px;
+}
+
+p {
+  color: rgb(29, 117, 222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15%;
+  font-weight: bold;
+}
+
+button {
+  background-color: rgb(29, 117, 222);
+}
+
+.boxDevices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 5%;
+}
+
+.device {
+  height: 150px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25%;
+}
+
+.computadora,
+.televisor,
+.smartphone,
+.consola {
+  grid-gap: 10px;
+}
+
+.device {
+  background-color: rgb(29, 117, 222);
+}
+
+summary {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+details > summary::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+}
+
+details[open] > summary::after {
+  position: absolute;
+  content: "-";
+  right: 20px;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  -webkit-animation: sweep 0.5s ease-in-out;
+          animation: sweep 0.5s ease-in-out;
+}
+
+@-webkit-keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+.GridFondo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+
+.footer {
+  background-color: rgb(29, 117, 222);
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.middleFooter {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+
+.sportifyFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+img.logoFooter {
+  border-radius: 50px;
+}
+
+.socialFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+.rightsFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 20px 20px;
+  font-size: 12px;
+}
+
+.leftFooter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.aHomeLogoFooter {
+  grid-area: 2/2/3/3;
+  height: 45px;
+  width: 45px;
+}
+
+.rightFooter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.arrowLogoFooter {
+  grid-area: 2/4/3/5;
+}/*# sourceMappingURL=descarga.css.map */
