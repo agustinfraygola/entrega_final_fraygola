@@ -2,67 +2,52 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="registro.css">
+  <link rel="stylesheet" href="login.css">
   <meta name="descripcion"
-    content="Registrate para empezara formar parte de la familia Sportify. Sportify es una herramienta que acerca la vida sana en la palma de tu mano">
-  <meta name="keywords" content="register registro sportify vida_sana salud ejercicio musculos grasa">
-  <title>Registro - Sportify</title>
+    content="Logueate desde tu cuenta para hacer ejercicio desde tu hogar, aire libre o desde donde prefieras. Sportify es una herramienta que acerca la vida sana en la palma de tu mano">
+  <meta name="keywords" content="login sportify vida_sana salud ejercicio musculos grasa">
+  <title>Login - Sportify</title>
 </head>
 
 <body>
   <div class="header">
-    <h1>¡Forma parte de la sportfamilia a traves de uno de los siguientes planes!</h1>
+    <h1>Logueate desde tu cuenta</h1>
     <div class="botonInicio"><a href="index.html">Inicio</a></div>
   </div>
 
-  <div class="wrap">
-    <div class="container">
-      <div class="titulo">
-        <h2>Registrate aquí:</h2>
-      </div>
-      <div class="row clearfix">
-        <div class="">
+  <div class="container">
+    <div class="wrap">
+      <div class="titulo"><span>Registro</span></div>
+      <form action="#">
+        <div class="row">
+          <i class="user"></i>
+          <input type="text" placeholder="correo electronico" required>
+        </div>
+        <div class="row">
+          <i class="lock"></i>
+          <input type="password" placeholder="contraseña" required>
+        </div>
+        <div class="row button">
+          <input type="submit" value="Login">
+        </div>
+        <div class="row">
+          <i class="lock"></i>
           <form>
-            <div class="row clearfix">
-              <div class="col_half">
-                <div class="inputRegistro"> <span><i aria-hidden="true" class="user"></i></span>
-                  <input type="text" name="nombre" placeholder="Nombre" />
-                </div>
-              </div>
-              <div class="col_half">
-                <div class="inputRegistro"> <span><i aria-hidden="true" class="user"></i></span>
-                  <input type="text" name="nombre" placeholder="Apellido" required />
-                </div>
-              </div>
-              <div class="inputRegistro"> <span><i aria-hidden="true" class="env"></i></span>
-                <input type="email" name="email" placeholder="Email" required />
-              </div>
-              <div class="inputRegistro"> <span><i aria-hidden="true" class="env"></i></span>
-                <input type="password" name="contraseña" placeholder="Contraseña" required />
-              </div>
-              <div class="inputRegistro"> <span><i aria-hidden="true" class="lock"></i></span>
-                <input type="password" name="contraseñare" placeholder="Escribe contraseña nuevamente" required />
-              </div>
-
-            </div>
-            <div class="inputRegistro opcion">
-              <select>
-                <option>Otro</option>
-                <option>Hombre</option>
-                <option>Mujer</option>
-              </select>
-              <div class="select_arrow"></div>
-            </div>
-            <div class="inputRegistro checkboxOpcion">
-              <input type="checkbox" id="cb1">
-              <label for="cb1">Estoy de acuerdo con los terminos y condiciones</label>
-            </div>
-            <input class="button" type="submit" value="Registrar" />
+            <input type="date" id="birthday" name="birthday" required>
           </form>
         </div>
-      </div>
+
+        <div class="row">
+          <i class="lock"></i>
+          Sexo:
+          <input type="radio" name="hm" value="h" required> Hombre
+          <input type="radio" name="hm" value="m" required> Mujer
+        </div>
+
+        <div>Se da por asumido que aceptas los terminos y condiciones.</div>
+      </form>
     </div>
   </div>
 
@@ -90,6 +75,7 @@
     </div>
     <div class="rightFooter"><a href="#top"><img src="images/iconsfooter/logoArrow.png"></a></div>
   </div>
+
 </body>
 
 </html>
